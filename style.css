@@ -1,0 +1,53 @@
+h1{
+	text-align: center;
+}
+
+
+.gridContainer{
+	margin:0 auto;
+	color: teal;	
+	height:688px; 
+	width: 666px;
+	background-color: #e6c4c4;
+	border: 50px solid red;
+	border-radius: 50px;
+
+}
+.gridSquares{	
+	border: 1px solid black;
+	padding: 10px;
+	display: inline-block;
+	margin:0 auto;
+	text-align: center;
+}
+
+#Cell1,#Cell2,#Cell3{	
+	color: red;
+	margin:0 auto;
+	height: 150px;
+	width:200px;
+}
+
+#Cell4,#Cell5,#Cell6{	
+	color: black;
+	margin:0 auto;
+	height: 150px;
+	width:200px;
+
+}
+
+#Cell7,#Cell8,#Cell9{
+	color: green;
+	margin:0 auto;
+	height: 150px;
+	width:200px;
+
+}
+
+#Cell10,#Cell11,#Cell12{
+	color: blue;
+	margin:0 auto;
+	height: 150px;
+	width:200px;
+
+}
