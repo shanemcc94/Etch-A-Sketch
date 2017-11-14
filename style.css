@@ -1,53 +1,42 @@
 h1{
 	text-align: center;
 }
+.hover{
+	
+	color: transparent;	
+	background-color: black;
+}
 
+.redrawForm{
+	margin:0 auto;
+	align-items:center;
+	text-align: center;
+}
 
 .gridContainer{
 	margin:0 auto;
-	color: teal;	
-	height:688px; 
-	width: 666px;
+	
+	height:700px; 
+	width: 700px;
 	background-color: #e6c4c4;
 	border: 50px solid red;
 	border-radius: 50px;
 
 }
 .gridSquares{	
-	border: 1px solid black;
-	padding: 10px;
+	color: transparent;		
 	display: inline-block;
 	margin:0 auto;
-	text-align: center;
-}
+	text-align: center
+	color: red;	
 
-#Cell1,#Cell2,#Cell3{	
-	color: red;
-	margin:0 auto;
-	height: 150px;
-	width:200px;
-}
-
-#Cell4,#Cell5,#Cell6{	
-	color: black;
-	margin:0 auto;
-	height: 150px;
-	width:200px;
-
-}
-
-#Cell7,#Cell8,#Cell9{
-	color: green;
-	margin:0 auto;
-	height: 150px;
-	width:200px;
-
-}
-
-#Cell10,#Cell11,#Cell12{
-	color: blue;
-	margin:0 auto;
-	height: 150px;
-	width:200px;
+	
+  	-moz-box-sizing: border-box;
+   	-webkit-box-sizing: border-box;
+  	box-sizing: border-box;
+  	width: 6.25%;
+  	height: 6.25%;
+  	
+  	
 
 }

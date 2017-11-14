@@ -7,19 +7,57 @@
 </head>
 <body>
 	<h1>Etch-A-Sketch</h1>
+	<div class="redrawForm">
+		<form action="redrawBox.js"> 
+			<input type="textContent" name="">
+			<input type="textContent" name="">
+			<input type="submit" name="">
+
+		</form>		
+		<button id="clearButton">Clear</button>
+	</div>
 	<div class="gridContainer">
 	</div>
 
 
 	<script type="text/javascript">
-		const gridContainer = document.querySelector('.gridContainer');
-		for(let i=0;i<12;i++){
-			let gridSquares = document.createElement('div');
-			gridSquares.id = "Cell"+ (i+1);
-			gridSquares.className = "gridSquares";
-			gridSquares.textContent = "Cell " + (i+1) ;
-			gridContainer.appendChild(gridSquares);
+
+		function highLightSquare(e){
+			console.log("Moused in" + e );
+			this.classList.add('hover');
 		}
+		function createDivs(){			
+			const gridContainer = document.querySelector('.gridContainer');					
+			const gridSquares = document.querySelectorAll(".gridSquares");  			
+			for(let i=0;i<256;i++){
+				let gridSquares = document.createElement('div');
+				gridSquares.id = "Cell" + (i+1);
+				gridSquares.className = "gridSquares";
+				gridSquares.textContent = "Cell : " + (i+1) ;
+
+				gridContainer.appendChild(gridSquares);					
+				gridSquares.addEventListener('mouseover', highLightSquare);
+			} 
+		}
+
+		function clearScreen(){			
+			let clearSquares = document.getElementsByClassName("gridSquares");
+			for(let i = 0;i<clearSquares.length;i++){
+				if(document.getElementById("Cell" + (i+1)).classList.contains("hover"))
+					document.getElementById("Cell" + (i+1)).classList.remove("hover")
+			}
+
+		}
+
+		
+
+		createDivs();		
+		const clearButton = document.getElementById("clearButton");
+		clearButton.addEventListener('click', clearScreen)
+		
+		
+
 	</script>
+
 </body>
 </html>
